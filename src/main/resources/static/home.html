@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio - Mi Foro Temático</title>
+  <link rel="stylesheet" href="css/home.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-brand">Mi Foro Temático</div>
+  <div>
+    <a href="blog.html" style="color: white; font-weight: bold; margin-right: 20px; text-decoration: none;">📚 Blog Oficial</a>
+
+    <a href="profile.html" class="btn" style="background: #6f42c1; color: white; text-decoration: none; padding: 6px 12px; border-radius: 4px;">👤 Mi Perfil</a>
+    <button id="adminPanelBtn" class="btn" style="display: none; background: #28a745; color: white; border: none; cursor: pointer; padding: 6px 12px; border-radius: 4px;" onclick="window.location.href='admin.html'">⚙️ Panel Usuarios</button>
+    <button id="logoutBtn" class="btn btn-danger" style="border: none; cursor: pointer; padding: 6px 12px; border-radius: 4px;">Cerrar Sesión</button>
+  </div>
+</nav>
+
+<div class="container">
+  <div id="createRoomSection" class="room-card" style="display: none; margin-bottom: 30px; padding: 20px;">
+    <h2>Crear Nueva Sala Temática</h2>
+    <br>
+    <form id="createRoomForm">
+      <label style="font-weight: bold; display: block; margin-bottom: 5px;">Nombre de la Sala</label>
+      <input type="text" id="newRoomName" required style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;">
+
+      <label style="font-weight: bold; display: block; margin-bottom: 5px;">Descripción</label>
+      <textarea id="newRoomDesc" required style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;"></textarea>
+
+      <div style="margin-bottom: 15px;">
+        <input type="checkbox" id="newRoomModerated">
+        <label for="newRoomModerated">Sala sujeta a moderación (los mensajes requieren aprobación previa)</label>
+      </div>
+
+      <button type="submit" class="btn" style="background: #007bff; color: white; font-weight: bold; border: none; padding: 10px 15px; border-radius: 4px; cursor: pointer;">Crear Sala</button>
+    </form>
+  </div>
+
+  <div id="adminPanel" class="admin-panel" style="display: none; margin-bottom: 30px;">
+    <h2 style="color: #343a40;">👑 Gestión de Moderadores</h2>
+    <p style="font-size: 13px; color: #666; margin-bottom: 15px;">Asigna moderadores a las salas (Máximo 2 salas por persona).</p>
+    <div id="moderatorsList">
+    </div>
+  </div>
+
+  <h2 id="favoritesTitle" style="display: none; color: #ffc107; margin-bottom: 15px;">⭐ Mis Salas Favoritas</h2>
+  <div id="favoritesContainer" class="rooms-grid" style="margin-bottom: 40px;">
+  </div>
+
+  <h2 style="color: #343a40; margin-bottom: 15px;">Explorar Salas</h2>
+  <div id="roomsContainer" class="rooms-grid">
+  </div>
+</div>
+
+<script src="js/home.js"></script>
+</body>
+</html>

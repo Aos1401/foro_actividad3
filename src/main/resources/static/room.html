@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sala de Foro - Mi Foro</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/room.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+<nav class="navbar">
+    <div class="nav-brand"><a href="home.html" style="color:white; text-decoration:none;">← Volver al Inicio</a></div>
+    <div class="nav-links">
+        <button id="logoutBtn" class="btn-logout">Cerrar Sesión</button>
+    </div>
+</nav>
+
+<div class="container">
+    <header class="room-header-section">
+        <h1 id="roomTitle">Cargando sala...</h1>
+        <div id="roomInfo"></div>
+    </header>
+
+    <section id="moderationSection" class="moderation-box" style="display: none;">
+        <h2>🛠️ Panel de Moderación</h2>
+        <p>Mensajes pendientes de aprobación:</p>
+        <div id="pendingPostsList"></div>
+    </section>
+
+    <section class="posts-section">
+        <h2 class="section-title">Comentarios</h2>
+        <div id="postsList">
+            <p class="loading-text">Cargando mensajes...</p>
+        </div>
+    </section>
+
+    <hr class="separator">
+
+    <section class="reply-section">
+        <h3>Escribe un comentario</h3>
+        <form id="postForm">
+            <textarea id="postContent" placeholder="¿Qué quieres decir? Recuerda que puedes mencionar a otros con @usuario" required></textarea>
+            <button type="submit" class="btn-primary">Publicar Mensaje</button>
+            <p id="postMessage" class="message"></p>
+        </form>
+    </section>
+</div>
+
+<script src="js/room.js"></script>
+</body>
+</html>

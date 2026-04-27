@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Perfil - Foro</title>
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-brand"><a href="home.html" style="color:white; text-decoration:none;">← Volver al Foro</a></div>
+</nav>
+<div class="container">
+  <div class="profile-card">
+    <h1 id="profUser">Cargando...</h1>
+    <p id="profEmail" style="color: #666;"></p>
+    <p>Rol: <strong id="profRole"></strong></p>
+  </div>
+
+  <div id="warningsSection" class="admin-panel" style="margin-bottom: 30px; border-top: 5px solid #dc3545; display: none;">
+    <h2 id="warningsTitle" style="color: #dc3545;">⚠️ Avisos de Moderación</h2>
+    <div id="warningsList">Cargando avisos...</div>
+  </div>
+
+  <div class="admin-panel" style="margin-bottom: 30px; border-top: 5px solid #007bff;">
+    <h2 style="color: #007bff;">🔔 Notificaciones del Foro</h2>
+    <div id="notificationsList">Buscando notificaciones...</div>
+  </div>
+
+  <div class="admin-panel">
+    <h2>Mi Historial de Participación</h2>
+    <div id="historyList">Cargando actividad...</div>
+  </div>
+</div>
+<script src="js/profile.js"></script>
+</body>
+</html>

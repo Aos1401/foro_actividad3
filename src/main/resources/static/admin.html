@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Administración</title>
+  <link rel="stylesheet" href="css/admin.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-brand"><a href="home.html" style="color:white; text-decoration:none;">← Volver al Foro</a></div>
+  <div style="color: white; font-weight: bold;">Centro de Mando (Superadmin)</div>
+</nav>
+
+<div class="container">
+  <section class="admin-panel">
+    <h2>Gestión de Permisos de Usuarios</h2>
+    <p style="margin-bottom: 20px; color: #666;">Aquí puedes ascender a otros participantes a Moderadores o dar de baja cuentas reincidentes.</p>
+
+    <table class="user-table">
+      <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Email</th>
+        <th>Rol Actual</th>
+        <th>Acciones</th>
+      </tr>
+      </thead>
+      <tbody id="usersList">
+      </tbody>
+    </table>
+  </section>
+</div>
+
+<script src="js/admin.js"></script>
+</body>
+</html>

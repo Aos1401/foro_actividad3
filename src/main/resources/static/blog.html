@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Oficial</title>
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/blog.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-brand">📚 Blog Oficial del Foro</div>
+  <div>
+    <a href="login.html" class="nav-link">Ir al Foro</a>
+    <a id="adminBtn" href="admin-blog.html" class="btn-admin-nav">✍️ Redactar (Admin)</a>
+  </div>
+</nav>
+
+<div class="container blog-container">
+  <h1 class="blog-header">Noticias y Artículos</h1>
+  <div id="blogList">
+    <p class="empty-blog-msg">Cargando artículos...</p>
+  </div>
+</div>
+
+<script src="js/blog.js"></script>
+</body>
+</html>

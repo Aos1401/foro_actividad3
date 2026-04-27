@@ -1,0 +1,134 @@
+/* ========================================== */
+/* ESTILOS COMUNES DEL BLOG Y EDITOR          */
+/* ========================================== */
+
+.blog-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* ========================================== */
+/* ESTILOS PARA BLOG.HTML (LECTURA)           */
+/* ========================================== */
+
+.blog-header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #343a40;
+}
+
+.empty-blog-msg {
+    text-align: center;
+    color: #888;
+}
+
+.error-blog-msg {
+    text-align: center;
+    color: red;
+}
+
+/* Botones de navegación del blog */
+.btn-admin-nav {
+    display: none;
+    background: #28a745;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-admin-nav:hover {
+    background: #218838;
+}
+
+.nav-link {
+    color: white;
+    margin-right: 15px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Tarjetas de artículos */
+.blog-post-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.blog-post-title {
+    color: #007bff;
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+
+.blog-post-meta {
+    color: #6c757d;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+.blog-post-content {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+    font-family: sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ========================================== */
+/* ESTILOS PARA ADMIN-BLOG.HTML (ESCRITURA)   */
+/* ========================================== */
+
+.editor-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+.editor-label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.editor-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.btn-publish {
+    margin-top: 20px;
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.btn-publish:hover {
+    background: #0056b3;
+}
+
+/* Altura obligatoria para que CKEditor no se vea enano */
+.ck-editor__editable {
+    min-height: 300px;
+    color: black;
+}
