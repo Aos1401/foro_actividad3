@@ -19,13 +19,11 @@ public class RoomService {
             throw new RuntimeException("Ya existe una sala con este nombre");
         }
 
-        // CORRECCIÓN FINAL:
-        // 1. Para el Record usamos: request.moderated()
-        // 2. Para el Builder de Room usamos: .moderated(...)
         Room room = Room.builder()
                 .name(request.name())
                 .description(request.description())
-                .moderated(request.moderated())
+                // Aquí llamamos al salvavidas: nunca será null
+                .moderated(request.obtenerBooleanoSeguro())
                 .build();
 
         roomRepository.save(room);

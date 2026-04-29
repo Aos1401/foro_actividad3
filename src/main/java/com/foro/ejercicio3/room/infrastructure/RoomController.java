@@ -1,7 +1,9 @@
 package com.foro.ejercicio3.room.infrastructure;
 
+import com.foro.ejercicio3.room.application.RoomService;
 import com.foro.ejercicio3.room.domain.Ban;
 import com.foro.ejercicio3.room.domain.Room;
+import com.foro.ejercicio3.room.domain.RoomRequest;
 import com.foro.ejercicio3.user.domain.User;
 import com.foro.ejercicio3.user.infrastructure.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -22,14 +24,18 @@ public class RoomController {
     private final UserRepository userRepository;
     private final BanRepository banRepository;
 
+    // AÑADIDO: Inyectamos el servicio que arreglamos anteriormente
+    private final RoomService roomService;
+
     @GetMapping
     public ResponseEntity<List<Room>> getAllRooms() {
         return ResponseEntity.ok(roomRepository.findAll());
     }
 
+    // CORREGIDO: Ahora recibe RoomRequest (nuestro escudo) y usa RoomService
     @PostMapping
-    public ResponseEntity<Room> createRoom(@RequestBody Room room) {
-        return ResponseEntity.ok(roomRepository.save(room));
+    public ResponseEntity<String> createRoom(@RequestBody RoomRequest request) {
+        return ResponseEntity.ok(roomService.createRoom(request));
     }
 
     @PostMapping("/{roomId}/assign-moderator/{userId}")
