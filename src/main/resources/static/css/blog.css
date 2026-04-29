@@ -21,11 +21,21 @@
 .empty-blog-msg {
     text-align: center;
     color: #888;
+    font-style: italic;
+    padding: 40px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border: 1px dashed #ccc;
 }
 
 .error-blog-msg {
     text-align: center;
     color: red;
+    font-style: italic;
+    padding: 40px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border: 1px dashed #ccc;
 }
 
 /* Botones de navegación del blog */
@@ -55,21 +65,30 @@
 .blog-post-card {
     background: white;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
-    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+    padding: 30px;
+    transition: transform 0.2s ease;
+}
+
+.blog-post-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
 }
 
 .blog-post-title {
     color: #007bff;
-    margin-bottom: 5px;
+    margin-top: 0;
+    margin-bottom: 10px;
     font-size: 24px;
 }
 
 .blog-post-meta {
     color: #6c757d;
     font-size: 12px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
 }
 
 .blog-post-content {
@@ -80,6 +99,37 @@
     font-family: sans-serif;
     color: #333;
     line-height: 1.6;
+}
+
+/* =========================================
+   MAGIA PARA LAS IMÁGENES DEL BLOG
+   ========================================= */
+
+/* 1. Regla para las imágenes sueltas */
+.blog-post-content img {
+    max-width: 100%; /* Impide que la imagen sea más ancha que la pantalla */
+    height: auto; /* Mantiene la proporción para que no se deforme */
+    display: block; /* Se comporta como un bloque independiente */
+    margin: 30px auto; /* 30px de espacio arriba/abajo, y 'auto' a los lados para CENTRARLA */
+    border-radius: 8px; /* Bordes ligeramente redondeados */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15); /* Sombra suave para darle profundidad */
+}
+
+/* 2. Regla por si CKEditor mete la imagen dentro de un contenedor <figure> */
+.blog-post-content figure.image {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido del contenedor */
+    margin: 30px 0;
+}
+
+/* 3. Regla para el texto que va debajo de la foto (pie de foto) */
+.blog-post-content figure.image figcaption {
+    font-size: 0.85em;
+    color: #888;
+    margin-top: 12px;
+    text-align: center;
+    font-style: italic;
 }
 
 /* ========================================== */
